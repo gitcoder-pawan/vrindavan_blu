@@ -1,0 +1,1071 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    -webkit-font-smoothing:antialiased;
+   background: linear-gradient(to right,#000428,#004e92);
+
+   &::-webkit-scrollbar{
+       width: 10px;   
+   }
+   &::-webkit-scrollbar-track{
+    background:linear-gradient(to right,rgb(241, 33, 224), rgb(0, 225, 255),rgb(253, 106, 8));
+    box-shadow: inset 0 0 10px rgba(11, 12, 11, 0.5);
+    border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+    background:linear-gradient(to bottom, rgb(34, 36, 114),rgb(14, 29, 54));
+    // box-shadow: inset 0 0 3px rgba(7, 238, 84, 0.5);
+    border-radius: 10px;
+    height: 10px;
+    }
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.flex{
+    display: flex;
+}
+.flexc{
+    display: flex;
+    flex-direction: column;
+}
+.justify{
+    justify-content: space-around;
+}
+.align{
+    align-items: center;
+}
+h3{
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+.cont{
+    width: 100%;
+    margin: 0 auto;
+}
+.cont1{
+  
+    background:linear-gradient(to bottom,#d9dae0,#cdd3f0);
+    border: 2px solid rgb(26, 25, 51);
+    transition: all .3s ease;
+    padding:2rem;
+    height: auto;
+    &:hover{
+        box-shadow: 0 0 1.5rem rgb(253, 236, 4);
+    }
+}
+.btn{
+    padding: .5rem .75rem;
+    border-radius: 4px;
+    line-height: .8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition:all .3sec ease;
+    border: 1px solid transparent;
+}
+.btn_l{
+    background: linear-gradient(to right,rgb(3, 3, 71), rgb(63, 45, 168));
+    color:azure;
+}
+.btn_l:hover{
+    box-shadow: 0 0 1rem rgb(44, 19, 133);  
+}
+.btn_r{
+    background: linear-gradient(to right,rgb(5, 5, 5), rgb(90, 81, 81));
+    color:azure;
+}
+.btn_r:hover{
+    box-shadow: 0 0 1.2rem rgb(18, 18, 19); 
+}
+.heading{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: rgb(6, 39, 39);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+// toggle button
+.toggle_button{
+    display: none;
+    .box{
+        position: fixed;
+           right: 0rem;
+           top:0;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+           background:transparent;
+           border: 2px solid rgb(250, 45, 45);
+        //    border-radius: 10px;
+           padding:8px;
+           height: 40px;
+           width:40px;
+           background: rgb(250, 45, 45);
+           z-index: 1;
+
+
+           .box_{
+            width: 100%;
+            height:5px;
+            border:1px solid rgb(250, 84, 62);
+            border-radius: 5px;
+            box-shadow: 0 0 2.5rem rgb(255, 251, 251);
+            background: rgb(245, 241, 241);
+           }
+
+           &:hover{
+            box-shadow: 0 0 1rem rgb(250, 2, 2);
+            border: 2px solid rgb(250, 247, 247);
+           }
+    }
+}
+// side menubar
+.nav_bg{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 80%;
+    border-top: 1px solid rgb(241, 234, 234);
+    border-right: 2px solid rgb(241, 234, 234);
+    border-bottom: 1px solid rgb(241, 234, 234);
+    height:100vh;
+    padding: 1.5rem 2rem;
+    color: rgb(162, 253, 253);
+    font-size: 1.4rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right,#405785,#1d31a3);
+    transform: translateX(-100%);
+    transition: all 1s ease;
+
+    ul{
+        list-style: none;
+        position: relative;
+        left: -2.5rem;
+        li{
+            display: block;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-transform: capitalize;
+            border: 0px solid transparent;
+            border-radius: 30px;
+            height: 2rem; 
+            background:rgb(82, 182, 240);
+            color: rgb(80, 73, 73);
+            font-size: 1rem;
+            font-weight:bold;
+            line-height: 2rem;
+            padding-left: .2rem;
+            margin: .75rem 0;
+            text-align: center;
+            transition: all .2s ease;
+
+            &:hover{
+                background:linear-gradient(to right,#f5af19,#f12711);
+                color: rgb(246, 248, 250);
+                transform:scale(1.08);
+                border: transparent;
+                font-size: 1.2rem;
+                box-shadow: 0 0 1rem rgb(255, 252, 252);
+            }
+        }
+    }
+
+}
+
+.move{
+    // left:0;
+    transform: translateX(0px);
+}
+
+
+//    topbar start here
+header.topbar
+{
+        background: rgb(55, 55, 58);
+        font-family:'Times New Roman', Times, serif;
+        padding: .75rem 0;  
+        a{
+            margin-right: .5rem;
+            &:hover{
+                box-shadow: 0 0 1rem white; 
+                text-decoration: none;
+            }
+        }
+        .user{
+            .divider{
+                color:aliceblue;
+                margin:0 1rem;
+            }
+        }
+}
+// navbar start here
+nav
+{
+       .logobar{
+       justify-content: space-between;
+       margin-top: 1rem;
+       color:aliceblue;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       h6{
+           letter-spacing: 1px;
+       }
+       h5{
+        letter-spacing: 1px;
+        }
+        .contact{
+            a{
+                color:rgb(44, 248, 3);
+                margin-right: .5rem;
+            }
+        }
+        .logo{
+            object-fit: cover;
+        }
+        
+        .clock{
+            margin-right: .5rem;
+            }
+    }
+
+   .navbar{
+    border-bottom: 2px solid rgb(44, 145, 170);
+    background: linear-gradient(to top,#000428,#004e92);
+    font-size: 1.1rem;
+    margin-top:1.5rem ; 
+    padding:.4rem 0;
+    border-radius: 10px;
+    &:hover{
+        box-shadow: 0 0 1rem white;
+    } 
+    a{
+    text-decoration: none;
+    padding:.4rem .61rem;
+    color:#bdc3c7;
+    transition: all .3s ease;
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    &:hover{
+        background: rgb(245, 245, 248);
+        color:rgb(21, 14, 87);
+        box-shadow: 0 0 1rem white;
+        transform: scale(1.1);
+        }
+    }
+   }
+}
+// welcome section start here --->   section 1
+ section.welcome
+ {
+    
+     .content{
+         width: 50%;
+        flex-direction: column;
+        min-height: 300px;
+         .vrindavan_{
+            font-family:cursive;
+            color:rgb(2, 5, 1);
+
+            span{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: rgb(14, 196, 8);
+                font-weight: bolder;
+                font-size:2rem;
+            }
+         }
+         h1{
+            text-align: justify;
+            color: rgb(138, 10, 10);
+            span{
+                color: rgb(247, 9, 120);
+            }
+            sub{
+                color:rgb(44, 212, 39) ;
+            }
+            }
+        p{
+            text-align: justify;
+            margin-bottom: 1rem;
+            width: 90%;
+        }
+        .btn_r{
+            margin-right: 1rem;
+        }
+     }
+    .bakery_pic{
+        // width: 50%; 
+        img{
+            width: 100%;
+        }
+    }
+ }
+// top products section starts here ----> section 2
+section.top_products
+{
+    .products{
+        width:100%;
+        padding:1rem auto;
+        height: auto;
+        flex-wrap: wrap;
+        .red{
+            &:hover{
+                background: rgb(248, 6, 6);
+            }
+        }
+        .black{
+            &:hover{
+                background: rgb(7, 7, 7);
+            }
+        }
+        .white{
+            &:hover{
+                background: rgb(226, 98, 98);
+            }
+        }
+        .dosa{
+            &:hover{
+                background: rgb(226, 217, 98);
+            }
+        }
+        .momos{
+            &:hover{
+                background: rgb(144, 196, 41);
+            }
+        }
+
+
+        .card{
+            padding: 10px .35rem;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+            border:2px solid  rgb(87, 150, 223);
+            background: linear-gradient(to bottom,aliceblue, rgb(92, 113, 160) );
+            height: 370px;
+            width: 14rem;
+            transition: all .3s ease;
+            &:hover{
+                box-shadow: 0 0 .7rem #23f707;
+                transform: scale(1.05);
+                border:3px solid transparent;
+            }
+            img{
+                height:60%;
+                width:98%;
+                object-fit:cover;
+                border: 1px solid transparent;
+                border-radius: 100px;
+                padding:.5rem;
+            }
+            .details{
+                text-align: center;
+                h3:first-child{
+                    font-size: 140%;
+                    color: rgb(3, 26, 151);
+                }
+                i{
+                    margin: 8px 0;
+                    color: rgb(145, 91, 11);
+                }
+                h4{
+                    color: antiquewhite;
+                }
+                button{
+                    width: 110%;
+                    margin-top: 10px;
+                    font-size: 1rem;
+                    transition: all .3s ease;
+                    line-height: normal;
+                    border: 1px solid rgb(59, 50, 57);
+                    border-radius: 5px;
+                    background:linear-gradient(to right, rgb(194, 191, 192) 20%,rgb(78, 74, 85));
+                   
+                    i{
+                        color: rgb(17, 17, 17);
+                        font-size: 130%;
+                    }
+                    &:hover{
+                        font-style: oblique;
+                        transform:scale(1.1);
+                        background: rgb(9, 226, 27);
+                        color: rgb(253, 249, 249);
+                        border:1px solid  transparent;
+                        box-shadow: 0 0 1rem rgb(255, 62, 62);
+                    }
+                }
+            }
+           
+        }
+    }
+}
+
+// fresh meal section ----> section 3
+section.fresh_meal
+{
+    .meal{
+        .meal_img{
+            padding: 2rem;
+            width: 50%;
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .meal_content{
+            padding: 2rem;
+            width: 50%;
+            h3{
+                text-align: justify;
+                padding-bottom: 1rem;
+            }
+            p{
+                text-align: justify;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}
+
+// servies section ---->section 4
+section.services{
+    .service_cont{
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+        padding: 0 auto;
+        .service_card{
+            // margin:0 auto;
+            text-align: center;
+            flex:1 1 19rem;
+            margin: 0 3rem;
+            border: 2px solid black;
+            border: 2px solid transparent;
+            background:linear-gradient(to bottom, rgb(226, 228, 255),rgb(85, 125, 163));
+            padding: 2rem;
+            margin-bottom: 3rem;
+            transition: all .3s ease;
+            &:hover{
+                box-shadow: 0 0 .7rem rgb(7, 7, 7);
+                transform: scale(1.05);
+            }
+            h3{ 
+                text-align: justify;
+                margin: 2rem 0 1rem 0;
+            }
+            p{
+                text-align: justify;
+            }
+            i{
+                color: #464649;
+                font-size: 2rem;
+            }
+            button{
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+// deal section
+section.deal{
+    .cont1{
+        background:linear-gradient(to top,#43C6AC,#191654);
+        // margin: 1.5rem 0;
+        border: 0px solid transparent;
+        .heading{
+            h2{
+                color: rgb(252, 248, 248);
+                text-shadow: -2px -2px 2px #e902afee;
+            }
+        }
+    .deal_content{
+        margin-top: 2rem;
+        width: 100%;
+        height: auto;
+        justify-content:space-evenly;
+        padding: 0 auto;
+       
+        .box{
+            width: 5rem;
+            height: 5rem;
+            // margin: 0 auto;
+            background:linear-gradient(to bottom,#1CB5E0,#000046);
+            color: #AAFFA9;
+            justify-content: center;
+            transition: all .3s ease;
+           
+            span{
+                &:first-child{
+                    font-size: 2.5rem;
+                    text-shadow: 2px 2px 2px #e902afee;
+                }
+                &:last-child{
+                    font-weight: bold;
+                    font-size: 1rem;
+                    font-family: 'Times New Roman', Times, serif;
+                }
+            }
+            &:hover{
+                box-shadow: 0 0 1rem rgb(27, 18, 18);
+            }
+        }
+    }
+}
+}
+
+// blog section
+section.blog{
+    .cont1{
+        .blog_content{
+            height: auto;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
+            .blog_card{
+                width: 28rem;
+                padding: 1rem;
+                margin-bottom: 2rem;
+                background:linear-gradient(to bottom, rgb(245, 241, 241),rgb(214, 212, 212));
+
+                .cmnt{
+                    justify-content: space-between;
+                }
+                img{
+                    width: 100%;
+                    height: 22rem;
+                    object-fit: cover;
+                }
+                h3{
+                    margin: 1rem 0;
+                }
+            }
+        }
+        .blog_btn{
+            text-align: center;
+            line-height: normal;
+            margin-top: 1rem;
+        }
+    }
+
+}
+
+// footer section
+footer.cont{
+    .cont1{
+        width: 100%;
+        background: rgb(37, 35, 35);
+        height: auto;
+        color: rgb(6, 234, 250);
+        margin:0 auto;
+        text-decoration: none;
+
+           .footer_cont{
+               justify-content: center;
+            flex-wrap: wrap;
+            height: auto;
+
+            .footer_card{
+                margin: 0 2rem 2rem 0;
+                padding: 1rem;
+                width: 300px;
+                height: 250px;
+                border: 2px solid white;
+                color: rgb(239, 242, 243);
+                a{
+                    color: #009FFF;
+                }
+                p{
+                    color: #009FFF;
+                }
+                hr{
+                    margin: .5rem 0;
+                    width: 100%;
+                }
+                button{
+                    margin-top: 1rem;
+                }
+                h4{
+                    margin:.4rem 0;
+                }
+                div{
+                    a{
+                        margin:.4rem 0;
+                    }
+                   
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+// media queries
+@media only screen and (max-width: 1450px){
+    section.top_products{
+        .products{
+            .momos{
+                display: none;
+            }
+        }
+    }
+}
+ @media only screen and (min-width: 1250px){
+    .cont_{
+        margin: 0 14rem;
+    }
+    nav{
+        .logobar{
+            .logo{
+                img{
+                height: 7rem;
+                width:19rem;
+                filter:saturate(3);
+                }
+            }
+        }
+    }
+    .cont1{
+        margin: 1.5rem  7rem 0 7rem;
+        // flex-direction: row;
+    }
+    section.welcome{
+        margin-top: 3rem;
+        .content{
+            width: 50%;
+        }
+        .bakery_pic{
+            width:50%;
+        }
+    }
+}
+@media only screen and (min-width: 1150px)and (max-width: 1250px)
+{
+    .cont_{
+        margin: 0 11rem;
+    }
+    nav{
+        .logobar{
+            .logo{
+                img{
+                height: 6.5rem;
+                width:17.7rem;
+                filter:saturate(3);
+                }
+            }
+        }
+    }
+    .cont1{
+        margin: 1.5rem  5rem 0 5rem;
+        // flex-direction: row;
+    }
+    section.welcome{
+        margin-top: 3rem;
+        .content{
+            width: 65%;
+        }
+        .bakery_pic{
+            width:50%;
+        }
+    }
+}
+@media only screen and (min-width: 1050px)and (max-width: 1150px)
+{
+    .cont_{
+        margin: 0 9rem;
+    }
+    nav{
+        .logobar{
+            .logo{
+                img{
+                    height: 6rem;
+                    width:16.3rem;
+                    filter:saturate(3);
+                }
+            }
+        }
+    }
+    .cont1{
+        margin: 1.5rem  1.5rem 0 1.5rem;
+        // flex-direction: row;
+    }
+    section.welcome{
+        margin-top: 3rem;
+        .content{
+            width: 80%;
+        }
+        .bakery_pic{
+            width:50%;
+        }
+    }
+}
+@media only screen and (min-width: 950px)and (max-width: 1050px)
+{
+    .cont_{
+        margin: 0 5rem;
+    }
+    nav{
+        .logobar{
+            .logo{
+                img{
+                    height: 5.5rem;
+                    width:15rem;
+                    filter:saturate(3);
+                }
+            }
+        }
+    }
+    section.welcome{
+        margin-top: 3rem;
+        .cont1{
+            background: rgb(228, 226, 226);
+        
+        .content{
+            width: 80%;
+        }
+    }
+    }
+    section.top_products{
+        .products{
+            .dosa{
+                display: none;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 850px)and (max-width: 950px)
+{
+    .cont_{
+        margin: 0 2.25rem;
+    }
+    nav{
+        .logobar{
+            .logo{
+                img{
+                    height: 5rem;
+                    width:13.7rem;
+                    filter:saturate(3);
+                }
+            }
+        }
+    }
+    section.welcome{
+        margin-top: 3rem;
+        .cont1{
+            background: rgb(228, 226, 226);
+        .content{
+            width: 80%;
+        }
+        .bakery_pic{
+            width:50%;
+        }
+    }
+    }
+    section.top_products{
+        .products{
+            .dosa{
+                display: none;
+            }
+        }
+    }
+}
+@media only screen and (min-width:765px) and (max-width: 850px)
+{
+    .cont_{
+        margin: 0 1.5rem;
+    }
+    nav{
+        .logobar{
+            .logo{
+                img{
+                    height: 5rem;
+                    width:13.7rem;
+                    filter:saturate(3);
+                }
+            }
+        }
+    }
+    section.welcome{
+        margin-top: 3rem;
+        .cont1{
+            flex-direction: column;
+            background: rgb(228, 226, 226);
+        .content{
+            width: 100%;
+            button{
+                display: none;
+            }
+        }
+        .bakery_pic{
+            width:100%;
+        }
+    }
+    }
+    section.top_products{
+        .products{
+            .dosa{
+                display: none;
+            }
+        }
+    }
+}
+@media only screen and (min-width:695px) and (max-width:765px)
+{
+    .toggle_button{
+        display: block;
+        .box{
+           right: 0;
+        }
+    }
+    .nav_bg{
+        width: 50%;
+        display: block;
+    }
+    .cont_{
+        margin: 0 1.5rem;
+    }
+    nav{
+        .logobar{
+            .logo{
+                display: block;
+                padding-left: 3rem;
+                img{
+                    height: 7.5rem;
+                    width:90%;
+                    filter:saturate(3);
+                }
+            }
+            .contact{
+                display: none;
+            }
+            .clock{
+                display: none;
+            }
+        }
+    }
+    section.welcome{
+        margin-top: 3rem;
+        .cont1{
+            flex-direction: column;
+            background: rgb(228, 226, 226);
+        .content{
+            width: 100%;
+            button{
+                display: none;
+            }
+        }
+    }
+    }
+    section.top_products{
+        .cont1{
+            padding: 2rem 0;
+        }
+        .products{
+            .dosa{
+                display: none;
+            }
+        }
+    }
+    section.fresh_meal{
+        .cont1{
+            .meal{
+                flex-direction: column;
+                width: 100%;
+                .meal_img{
+                    order: 2;
+                    width: 100%;
+                }
+                .meal_content{
+                    width: 100%;
+                    order: 1;
+                    button{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:580px) and (max-width: 695px)
+{
+    .toggle_button{
+        display: block;
+    }
+    .nav_bg{
+        display: block;
+        width: 60%;
+    }
+    .cont_{
+        margin: 0 1.5rem;
+    }
+    header.topbar{
+        .social-contacts{
+            a{
+                &:last-child{
+                    display: none;
+                }
+                &:nth-child(4){
+                    display: none;
+                }
+
+            }
+        }
+        
+    }
+    nav{
+        .logobar{
+            .contact{
+                display: none;
+            }
+            .clock{
+                display: none;
+            }
+            .logo{
+                display: block;
+                padding-left: 3rem;
+                img{
+                    height: 7rem;
+                    width:90%;
+                    filter:saturate(3);
+                }
+            }
+        }
+    }
+    section.welcome{
+        margin-top: 3rem;
+        .cont1{
+            flex-direction: column;
+            background: rgb(228, 226, 226);
+           
+        .content{
+            width: 100%;
+            button{
+                display: none;
+            }
+        }
+    }
+    }
+    section.fresh_meal{
+        .cont1{
+            .meal{
+                flex-direction: column;
+                width: 100%;
+                .meal_img{
+                    order: 2;
+                    width: 100%;
+                }
+                .meal_content{
+                    width: 100%;
+                    order: 1;
+                    button{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}  
+@media only screen and (max-width:580px)
+{
+    .toggle_button{
+        display: block;
+    }
+    .nav_bg{
+        display: block;
+        width: 60%;
+    }
+    header.topbar{
+        display: none;
+    }
+    nav{
+        .logobar{
+            position: relative;
+            top: -.95rem;
+            .contact{
+                display: none;
+            }
+            .clock{
+                display: none;
+            }
+            .logo{
+                display: block;
+                img{
+                    width: 100%;        
+                    height:8.55rem;
+                   filter:saturate(4);
+                }
+            }
+        }
+        .navbar{
+            display: none;
+        }
+    }
+    section.welcome{
+        margin-top: -1rem;  
+        .cont1{
+            flex-direction: column;
+            background: rgb(228, 228, 245);
+            .vrindavan_{
+               display: none;
+            }
+            .content{
+            width: 100%;
+            h1{
+                margin: 1rem 0;
+            }
+            p{
+                margin-bottom: 2rem;
+            }
+            button{
+                display: none;
+            }
+        }
+    }
+    }
+    section.top_products{
+        .cont1{
+            .products{
+                .momos{
+                    display: block;
+                    .details{
+                        button{
+                            width: 75%;
+                            margin:1rem auto;
+                        }
+                    }
+                    }
+            }
+        }
+    }
+    section.fresh_meal{
+        .cont1{
+            .meal{
+                flex-direction: column;
+                width: 100%;
+                .meal_img{
+                    order: 2;
+                    width: 100%;
+                }
+                .meal_content{
+                    width: 100%;
+                    order: 1;
+                    button{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
